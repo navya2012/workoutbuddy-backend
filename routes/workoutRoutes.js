@@ -18,13 +18,13 @@ router.get('/', getWorkoutData)
 router.get('/:id', getWorkoutDataById)
 
 //create add
-router.post('/', createWorkoutData)
+router.post('/newData', createWorkoutData)
 
 //update data
-router.patch('/:id', updateWorkoutData)
+router.patch('/updateData/:id', updateWorkoutData)
 
 //delete data
-router.delete('/:id?', deleteWorkoutData)
+router.delete('/deleteData/:id?', deleteWorkoutData)
 
 
 module.exports = router
