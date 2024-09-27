@@ -33,7 +33,7 @@ const createWorkoutData = async (req,res) => {
     try{
         const newWorkoutData = new workoutModels({title, reps, load, user_id})
         await newWorkoutData.save()
-        res.status(201).json({message: "Data Successfully Created"})
+        res.status(201).json({message: "Data Successfully Created", newWorkoutData})
     }
     catch(err){
         res.status(400).json({error:err.message})
