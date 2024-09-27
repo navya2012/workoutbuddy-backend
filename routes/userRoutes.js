@@ -7,6 +7,6 @@ const { loginDetails, signUpDetails, signUpValidationRules} = require('../contro
 
 router.post('/login', loginDetails)
 
-router.post('/signup', signUpDetails )
+router.post('/signup', signUpValidationRules, signUpDetails )
 
 module.exports = router 
