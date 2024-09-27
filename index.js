@@ -3,8 +3,6 @@ require("dotenv").config();
 
 const express = require("express")
 const cors = require('cors')
-const { swaggerSpecification } = require('./Utils/swagger');
-const swaggerUi = require("swagger-ui-express");
 
 const app= express()
 
@@ -27,11 +25,8 @@ app.use('/api/user', userRoutes )
 
 
 app.get("/", (req,res) => {
-    res.send('hello')
+    res.send('hello world')
 })
-
-//swagger documentation
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecification));
 
 app.listen(port, () => {
     console.log(`server is running at port number ${port}`)
