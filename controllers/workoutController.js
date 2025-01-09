@@ -27,7 +27,7 @@ const getWorkoutDataById = async (req,res) => {
 
 //create data
 const createWorkoutData = async (req,res) => {
-    const { title, reps, load} = req.body
+    const { title, reps, load} = req.body 
     const user_id =  req.user._id
 
     try{
